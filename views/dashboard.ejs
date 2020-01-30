@@ -1,3 +1,24 @@
-<h1 class="mt-4">Dashboard</h1>
+
+
+<nav class="navbar navbar-expand-lg nav-container fixed-top navbar-dark bg-dark">
+    <div class="navbar-brand">
+        <a  href="/users/logout">
+            <i class="fas fa-dice-d20"></i>
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto float-right">
+        <li class="nav-item float-right">
+            <a href="/users/logout" class="nav-link">Logout</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+
+  <h1 class="mt-4">Dashboard</h1>
 <p class="lead mb-3">Welcome <%= user.name%></p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>

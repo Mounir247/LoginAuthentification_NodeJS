@@ -23,12 +23,12 @@ router.post('/register', (req, res)=>{
 
    //Check passwords match
    if(password !== password2){
-       errors.push({msg : 'Passwords do not match'});
+       errors.push({msg : 'Les mots de passe ne correspondent pas'});
    }
 
    //Check pass length
    if(password.length <6){
-       errors.push({msg : 'Password should be at least 6 characters'});
+       errors.push({msg : 'le mot de passe doit contenir au moins 6 caractéres'});
    }
 
    if(errors.length > 0){
@@ -44,7 +44,7 @@ router.post('/register', (req, res)=>{
        //Validation passed
        User.findOne({ email: email }).then(user => {
         if (user) {
-          errors.push({ msg: 'Email already exists' });
+          errors.push({ msg: 'Cet email existe déja' });
           res.render('register', {
             errors,
             name,
@@ -70,7 +70,7 @@ router.post('/register', (req, res)=>{
                   //Save user
                   newUser.save()
                   .then(user => {
-                      req.flash('success_msg', 'You are now registered and can log in');
+                      req.flash('success_msg', 'Votre compte a été créé, vous pouvez maintenant vous connecter');
                     res.redirect('/users/login');
                   })
                   .catch(err=> console.log(err));
@@ -94,7 +94,7 @@ router.post('/login', (req,res,next)=>{
 
 router.get('/logout', (req, res) => {
   req.logout();
-  req.flash('success_msg', 'You are logged out');
+  req.flash('success_msg', 'Vous étes déconnecté');
   res.redirect('/users/login');
 });
 
