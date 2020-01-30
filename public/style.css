@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(114, 55, 55);
+}
+/*=============
+= Layouts EJS =
+=============*/
+.alt-welcome-box {
+    position: relative;
+    padding :0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 1px transparent;
+    border-radius: 0rem;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 1.25rem;
+}
+
+.alt-welcome-title{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.alt-welcome-btn{
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    border-radius: 0px;
+}
+.alt-welcome-btn:hover{
+    background-color: #000;
+    color: #fff;
+    
+}
+/*=================
+= End Layouts EJS =
+=================*/
+
+/*===========
+= Login EJS =
+===========*/
+.alt-login-box{
+    position: relative;
+    padding :0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 1px transparent;
+    border-radius: 0rem;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 1.25rem;
+}
+
+.alt-login-label{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.alt-login-input{
+    border: 1px solid #000;
+    border-radius: 0;
+}
+.alt-login-btn{
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 0px;
+}
+.alt-login-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+}
+/*===============
+= END Login EJS =
+===============*/
+
+/*==============
+= Register EJS =
+==============*/
+.alt-register-box{
+    position: relative;
+    padding :0;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 1px transparent;
+    border-radius: 0rem;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    padding: 1.25rem;
+}
+.alt-register-label{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.alt-register-input{
+    border: 1px solid #000;
+    border-radius: 0;
+}
+.alt-register-btn{
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 0px;
+}
+.alt-register-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+/*==================
+= END Register EJS =
+==================*/

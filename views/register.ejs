@@ -1,58 +1,68 @@
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <h1 class="text-center mb-3"><i class="fas fa-user-plus"></i> Register</h1>
+<div class="row mt-3">
+    <div class="col-md-6 alt-register-box m-auto">
+        <h1 class="text-center mb-3"> Créez votre compte</h1>
         <%- include ("partials/messages") %>
         <form action="/users/register" method="POST">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" class="alt-login-label">Votre nom:</label>
             <input
               type="name"
               id="name"
               name="name"
-              class="form-control"
-              placeholder="Enter Name"
+              class="form-control alt-register-input"
+              placeholder="Prénom NOM"
                value="<%= typeof name != 'undefined' ? name : '' %>" 
             />
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" class="alt-register-label">Votre email:</label>
             <input
               type="email"
               id="email"
               name="email"
-              class="form-control"
-              placeholder="Enter Email"
+              class="form-control alt-register-input"
+              placeholder="exemple@email.com"
               value="<%= typeof email != 'undefined' ? email : '' %>"
             />
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="number" class="alt-register-label">Votre numéro:</label>
+            <input
+              type="number"
+              id="number"
+              name="number"
+              class="form-control alt-register-input"
+              placeholder="+33 (0) x xx xx xx xx"
+              value="<%= typeof number != 'undefined' ? number : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password" class="alt-register-label">Votre mot de passe:</label>
             <input
               type="password"
               id="password"
               name="password"
-              class="form-control"
-              placeholder="Create Password"
+              class="form-control alt-register-input"
+              placeholder="Mot de passe"
               value="<%= typeof password != 'undefined' ? password : '' %>"
             />
           </div>
           <div class="form-group">
-            <label for="password2">Confirm Password</label>
+            <label for="password2" class="alt-register-label">Confirmez votre mot de passe: </label>
             <input
               type="password"
               id="password2"
               name="password2"
-              class="form-control"
-              placeholder="Confirm Password"
+              class="form-control alt-register-input"
+              placeholder="Confirmez mot de passe"
               value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
             />
           </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Register
+          <button type="submit" class="btn alt-register-btn btn-block">
+            Créer mon compte
           </button>
         </form>
-        <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
-      </div>
+        <p class="lead mt-4">Vous avez déja un compte? <a href="/users/login"><strong>Connectez-vous</strong></a></p>
+      
     </div>
   </div>
