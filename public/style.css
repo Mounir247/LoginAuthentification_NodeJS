@@ -140,8 +140,35 @@ body {
 /*===============
 = Dashboard EJS =
 ===============*/
+.nav-container {
+    background-color: #70960a ;
+    opacity: 0.8;
+}
+ 
+.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+    
+    
 
-
+}
+nav .navbar-nav li a {
+    font-weight: 700;
+    border: 1px solid #e00707;
+    border-radius: 5px;
+    color: #e00707 !important;
+}
+nav .navbar-nav li a:hover {
+    background-color: #e00707;
+    border: 1px solid #e00707;
+    color: #000000 !important;
+}
+.logo {
+    text-indent: -9999px;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+}
 
 
 /*===================
