@@ -1,3 +1,128 @@
+<nav class="navbar navbar-expand-lg nav-container fixed-top ">
+ 
+    <a class="navbar-brand" href=""><i class="fas fa-dice-d20"></i></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto float-right">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          
+          Profil
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          
+          Catalogue
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
+        </a>
+        
+      </li>
+      <!-- <li class="nav-item">
+        <a href="" class="nav-link">Activités</a>
+    </li>
+      <li class="nav-item">
+          <a href="" class="nav-link">Profil</a>
+      </li>
+      <li class="nav-item">
+          <a href="" class="nav-link">Messagerie</a>
+      </li> -->
+      <li class="nav-item">
+          <a href="/users/logout" class="nav-link">Déconnexion</a>
+      </li>
+     
+      
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item alt">
+            <a class="nav-link active" href="#">
+              Menu 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-user"></i>
+              Profil
+            </a>
+          </li>
+          <li class="nav-item">
+            
+            <a class="nav-link" href="#">
+              <i class="far fa-envelope"></i>
+
+              Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
+            </a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-newspaper"></i>
+              Actualités
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+             Mes commandes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-question-circle"></i>
+              Besoin d'aide?
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>Informations</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+            
+          </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-chart-line"></i>
+               Rapports
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-history"></i>
+              Historique d'Activités
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-lock"></i>
+              Sécurité
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/logout">
+              <i class="fas fa-sign-out-alt"></i> 
+              Déconnexion
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
 <div class="container">
   <div class="py-5 text-center">
@@ -149,6 +274,15 @@
         <hr class="mb-4">
 
         <h4 class="mb-3">Payment</h4>
+        <div class="check-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fab fa-cc-amazon-pay"></i>
+        </div>
+       
 
         <div class="d-block my-3">
           <div class="custom-control custom-radio">
@@ -198,7 +332,7 @@
           </div>
         </div>
         <hr class="mb-4">
-        <a href="dashboard" class="btn btn-block alt-general-btn mb-2">Procéder au payement</a>
+        <a href="dashboard" class="btn btn-block alt-general-btn mb-5">Procéder au payement</a>
 
       </form>
     </div>
@@ -206,3 +340,112 @@
 
   
 </div>
+
+<!-- FOOTER/CONTACT SECTION-->
+<!--FOOTER Section-->
+<section class="page-section container-fluid border-top" id="footer">
+    <div class="row footer-big mt-3">
+        <!-- Grid Footer row -->
+            <!-- Grid Footer column -->
+            <div class="col-md-3 ">
+              
+            </div>
+            <!-- End Grid Footer column -->
+            <!-- Grid Footer column -->
+            <div class="col-md-3">
+              <div class="footer-menu">
+                  
+                <h5 class="alt-footer-subtitle font-alt mb-4 ">
+                    Contact:
+                </h5>
+                <ul class="nav flex-column mb-2">
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-phone"></i>
+                      +33 (0) 6 51 75 84 89
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-paper-plane"></i>
+                      mounir.laskri@gmail.com
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-hand-point-right"></i>
+                     mounirlaskri.com
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="" href="/users/logout" >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a class="" href="/users/logout" ><i class="fab fa-linkedin"></i></a>
+                    <a class="" href="/users/logout" ><i class="fab fa-codepen"></i></a>
+                    
+                      
+                  </li>
+                </ul>
+            </div>
+                <!-- Links -->
+            </div>
+            <!-- End Grid Footer column -->
+            <!-- Grid Footer column -->
+            <div class="col-md-3 ">
+              <div class="footer-menu">
+                  
+                <h5 class="alt-footer-subtitle font-alt mb-4 ">
+                    Helpful:
+                </h5>
+                <ul class="nav flex-column mb-2">
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-chart-line"></i>
+                       Rapports
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-history"></i>
+                      Historique d'Activités
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="nav-link" href="#">
+                      <i class="fas fa-lock"></i>
+                      Sécurité
+                    </a>
+                  </li>
+                  <li class="">
+                    <a class="nav-link" href="/users/logout">
+                      <i class="fas fa-sign-out-alt"></i> 
+                      Déconnexion
+                    </a>
+                  </li>
+                </ul>
+            </div>
+               
+                <!-- Links -->
+            </div>
+            <!-- End Grid Footer column -->
+            <!-- Grid Footer column -->
+            <div class="col-md-3 ">
+              
+                <!-- Links -->
+            </div>
+            <!-- End Grid Footer column -->
+            <!-- Grid Footer column -->
+            <div class="container-fluid footer-copyright text-center mb-1">
+                <!-- Copyright -->
+                    <p>
+                        © 2020<a href="index.html"> LoginPassport</a>. All rights reserved. Created by<a href="https://github.com/Mounir247" target="_blank"> Laskri Mounir</a>
+                    </p>
+                <!-- End Copyright -->
+            </div>
+        <!-- End Grid Footer column -->
+  </div>
+  </section>
+  <!--FOOTER Section-->
+    <!--END FOOTER/CONTACT SECTION-->
+  

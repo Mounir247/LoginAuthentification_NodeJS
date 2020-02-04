@@ -48,6 +48,24 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarsExample04">
     <ul class="navbar-nav mr-auto float-right">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          
+          Profil
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          
+          Catalogue
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
+        </a>
+        
+      </li>
       <!-- <li class="nav-item">
         <a href="" class="nav-link">Activités</a>
     </li>
@@ -87,7 +105,7 @@
             <a class="nav-link" href="#">
               <i class="far fa-envelope"></i>
 
-              Messagerie
+              Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
             </a>
             
           </li>
@@ -174,24 +192,24 @@
           </div>
           <div class="post-prev-img">
               <a href="#" target="_blank">
-                  <img src="../public/images/contact-pic-2.jpg" alt="" class="img-fluid" >
+                  <img src="../public/images/adult-art-beautiful-beauty-415206.jpg" alt="" class="img-fluid" >
               </a>
           </div>
           <div class="post-prev-text">
-            <a href="Contact.php" data-toggle="modal" data-target="#inboxModal">Votre profil</a>
+            <a href="" data-toggle="modal" data-target="#profilModal">Votre profil</a>
                </div>
                <!--modal-->
-               <div class="modal fade " id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="inboxModalLabel" aria-hidden="true">
+               <div class="modal fade " id="profilModal" tabindex="-1" role="dialog" aria-labelledby="profilModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content modal-section">
                         <div class="modal-header">
-                            <h5 class="modal-title modal-title-item" id="inboxModalLabel"><%= user.name%></h5>
+                            <h5 class="modal-title modal-title-item" id="profilModalLabel"><%= user.name%></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                         </div>
                         <div class="modal-body">
-                            <form method="post" action="inbox.php">
+                            <form method="post" action="">
                                 <!--    
                                 <label for="number">Your Phone Number</label>
                                 <input type="number" class="form-control" name="usename" placeholder="">
@@ -230,18 +248,62 @@
         <div class=" col-md-4 mt-3">
           <div class="alt-project-item">
             <div class="post-news-title text-center font-alt pt-2">
-              <a href="#" target="_blank">Services</a>
+              <a href="#" target="_blank">Messagerie</a>
           </div>
           <div class="post-prev-img">
-              <a href="https://www.sima-sipsa.com/Exposants/L-agriculture-en-Algerie" target="_blank">
-                  <img src="../public/images/defocused-image-of-lights-255379.jpg" alt="" class="img-fluid" >
+              <a href="" target="_blank">
+                  <img src="../public/images/gray-metal-cubes-decorative-1005644.jpg" alt="" class="img-fluid" >
               </a>
           </div>
-          
+
 
           <div class="post-prev-text">
-            Découverez nos sérvices
+            <div class="post-prev-text">
+              <a href="" data-toggle="modal" data-target="#inboxModal">Messages reçus: </a><span class="badge badge-pill bg-light align-text-bottom">0</span>
+                 </div>
                </div>
+                    <!--modal-->
+                    <div class="modal fade alt-modal-container" id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="inboxModalLabel" aria-hidden="true">
+                          <div class="modal-content modal-dialog modal-section">
+                              <div class="modal-header">
+                                  <h3 class="modal-title modal-title-item" id="inboxModalLabel"><strong>Messages reçus :</strong>  <span class="badge badge-pill bg-light align-text-bottom">0</span></h3>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <h4 class="modal-title modal-title-item" id="inboxModalLabel">Envoyez un message:</h4>
+
+                                <form action="#">
+                                  <div class="form-group mt-4">
+                                    <label for="">De : <strong><%= user.name%></strong> </label> 
+                                    <span>(<%= user.email%>)</span>
+                                    <br>
+                                    <label for="">A : </label>
+                                    <div class="checkbox mb-1 mt-1">
+                                        <input type="checkbox" value="remember-me"> <label for=""><strong>Service client </strong><span>(contact@gmail.com)</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for=""> <strong>Autre déstinataire:</strong></label>
+                                    <input type="text" class="form-control alt-login-input  " placeholder="Entrez une adresse e-mail">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for=""> <strong>L'objet de votre message:</strong></label>
+                                    <input type="text" class="form-control alt-login-input " placeholder="Objet">
+                                    <br>
+                                    <label for=""><strong>Votre message:</strong> </label>
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control alt-login-input "
+                                    placeholder="Ecrivez ici..."></textarea>
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                    <input type="submit" value="Envoyer Message" class="btn  btn-block  alt-register-btn">
+                                  </div>
+                                </form>
+                              </div>
+      
+                          </div>
+                      
+                  </div>
           </div>
             
         </div>
@@ -254,7 +316,7 @@
           </div>
           <div class="post-prev-img">
               <a href="https://www.sima-sipsa.com/Exposants/L-agriculture-en-Algerie" target="_blank">
-                  <img src="../public/images/order-pic-1.jpg" alt="" class="img-fluid" >
+                  <img src="../public/images/burned-match-sticks-3398706.jpg" alt="" class="img-fluid" >
               </a>
           </div>
           
@@ -267,6 +329,10 @@
         </div>
       </div>
         <!--END POST Item -->
+
+
+
+
          <!--PRICING SECTION -->
          
          
@@ -284,6 +350,11 @@
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Basic</h4>
           </div>
+          <div class="post-prev-img">
+            <a href="" target="_blank">
+                <img src="../public/images/black-laptop-computer-beside-white-steno-notebook-2034373.jpg" alt="" class="img-fluid" >
+            </a>
+        </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">0 € <small class="text-muted">/ mois</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -301,6 +372,11 @@
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Pro</h4>
           </div>
+          <div class="post-prev-img">
+            <a href="" target="_blank">
+                <img src="../public/images/StockSnap_O4V3KXZI1T.jpg" alt="" class="img-fluid" >
+            </a>
+        </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title"> 4.99 € <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -318,6 +394,11 @@
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Premium</h4>
           </div>
+          <div class="post-prev-img">
+            <a href="" target="_blank">
+                <img src="../public/images/flatlay-of-gadgets-3184451.jpg" alt="" class="img-fluid" >
+            </a>
+        </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">10.99 € <small class="text-muted">/ mois</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -338,65 +419,112 @@
 <!--END PRICING SECTION -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <h2>Activitée</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>sit</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>amet</td>
-              <td>consectetur</td>
-              <td>adipiscing</td>
-              <td>elit</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>Integer</td>
-              <td>nec</td>
-              <td>odio</td>
-              <td>Praesent</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>libero</td>
-              <td>Sed</td>
-              <td>cursus</td>
-              <td>ante</td>
-            </tr>
-     
-          </tbody>
-        </table>
-      </div>
-      <!-- END FEED SECTION -->
-    </main>
-  </div>
+<!-- FOOTER/CONTACT SECTION-->
+<!--FOOTER Section-->
+<section class="page-section container-fluid border-top" id="footer">
+  <div class="row footer-big mt-3">
+      <!-- Grid Footer row -->
+          <!-- Grid Footer column -->
+          <div class="col-md-3 ">
+            
+          </div>
+          <!-- End Grid Footer column -->
+          <!-- Grid Footer column -->
+          <div class="col-md-3">
+            <div class="footer-menu">
+                
+              <h5 class="alt-footer-subtitle font-alt mb-4 ">
+                  Contact:
+              </h5>
+              <ul class="nav flex-column mb-2">
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-phone"></i>
+                    +33 (0) 6 51 75 84 89
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-paper-plane"></i>
+                    mounir.laskri@gmail.com
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-hand-point-right"></i>
+                   mounirlaskri.com
+                  </a>
+                </li>
+                <li class="">
+                  <a class="" href="/users/logout" >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a class="" href="/users/logout" ><i class="fab fa-linkedin"></i></a>
+                  <a class="" href="/users/logout" ><i class="fab fa-codepen"></i></a>
+                  
+                    
+                </li>
+              </ul>
+          </div>
+              <!-- Links -->
+          </div>
+          <!-- End Grid Footer column -->
+          <!-- Grid Footer column -->
+          <div class="col-md-3 ">
+            <div class="footer-menu">
+                
+              <h5 class="alt-footer-subtitle font-alt mb-4 ">
+                  Helpful:
+              </h5>
+              <ul class="nav flex-column mb-2">
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-chart-line"></i>
+                     Rapports
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-history"></i>
+                    Historique d'Activités
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-lock"></i>
+                    Sécurité
+                  </a>
+                </li>
+                <li class="">
+                  <a class="nav-link" href="/users/logout">
+                    <i class="fas fa-sign-out-alt"></i> 
+                    Déconnexion
+                  </a>
+                </li>
+              </ul>
+          </div>
+             
+              <!-- Links -->
+          </div>
+          <!-- End Grid Footer column -->
+          <!-- Grid Footer column -->
+          <div class="col-md-3 ">
+            
+              <!-- Links -->
+          </div>
+          <!-- End Grid Footer column -->
+          <!-- Grid Footer column -->
+          <div class="container-fluid footer-copyright text-center mb-1">
+              <!-- Copyright -->
+                  <p>
+                      © 2020<a href="index.html"> LoginPassport</a>. All rights reserved. Created by<a href="https://github.com/Mounir247" target="_blank"> Laskri Mounir</a>
+                  </p>
+              <!-- End Copyright -->
+          </div>
+      <!-- End Grid Footer column -->
 </div>
+</section>
+<!--FOOTER Section-->
+  <!--END FOOTER/CONTACT SECTION-->
+
+
