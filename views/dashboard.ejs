@@ -39,29 +39,30 @@
   </ul>
   
 </nav> -->
-<nav class="navbar navbar-expand-lg nav-container fixed-top ">
+<html class="dashboard-full">
+  <nav class="navbar navbar-expand-lg nav-container fixed-top ">
  
-    <a class="navbar-brand" href=""><i class="fas fa-dice-d20"></i></a>
+    <a class="navbar-brand" href="/dashboard/"><i class="fas fa-dice-d20"></i></a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon my-toggler"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarsExample04">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto float-right">
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
           
-          Profil
+          Compte
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#pricing">
           
           Catalogue
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
           Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
         </a>
         
@@ -90,19 +91,19 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item alt">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active alt-sidebar-title" href="#">
               Menu 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
               <i class="far fa-user"></i>
-              Profil
+              Compte
             </a>
           </li>
           <li class="nav-item">
             
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
               <i class="far fa-envelope"></i>
 
               Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
@@ -110,9 +111,9 @@
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="far fa-newspaper"></i>
-              Actualités
+            <a class="nav-link" href="#pricing">
+              <i class="fab fa-buromobelexperte"></i>          
+                 Catalogue
             </a>
           </li>
           <li class="nav-item">
@@ -130,7 +131,7 @@
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Informations</span>
+          <span>Accés</span>
           <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
             
           </a>
@@ -164,16 +165,13 @@
       </div>
     </nav>
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class=" ml-sm-auto  col-lg-10 px-4 dashboard-full">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         
         <p class="lead mb-3 mt-5">Bienvenue<strong>  <%= user.name%></strong></p> 
-        
+         <!--Weather Widget-->
         <div class="btn-toolbar mb-2 mb-md-0">
-          
-          <!--Weather Widget-->
-          <div id="openweathermap-widget-23"></div>
-         
+          <div id="openweathermap-widget-23" class=""></div>
         </div>
         <!--END Weather Widget-->
       </div>
@@ -181,29 +179,29 @@
       
       <!-- FEED SECTION -->
 
-      <div class="alt-project-container row">
+      <div class="alt-project-container row border-bottom pb-5 mb-2">
 
 
         <!--POST Item-->
-        <div class=" col-md-4 mt-3">
+        <div class="offset-md-3 col-md-2 mt-3">
           <div class="alt-project-item">
-            <div class="post-news-title text-center font-alt pt-2">
-              <a href="#" target="_blank"><%= user.name%></a>
+            <div class="post-news-title text-center font-alt ">
+              <a href="" target="_blank" data-toggle="modal" data-target="#profilModal"><strong>Compte</strong>  </a>
           </div>
           <div class="post-prev-img">
-              <a href="#" target="_blank">
-                  <img src="../public/images/adult-art-beautiful-beauty-415206.jpg" alt="" class="img-fluid" >
+              <a href="" target="_blank" data-toggle="modal" data-target="#profilModal">
+                  <img src="../public/images/puzzle.jpg" alt="" class="img-fluid" data-target="#profilModal" >
               </a>
           </div>
           <div class="post-prev-text">
-            <a href="" data-toggle="modal" data-target="#profilModal">Votre profil</a>
+            <a href="" data-toggle="modal" data-target="#profilModal"><%= user.name %></a>
                </div>
                <!--modal-->
                <div class="modal fade " id="profilModal" tabindex="-1" role="dialog" aria-labelledby="profilModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content modal-section">
                         <div class="modal-header">
-                            <h5 class="modal-title modal-title-item" id="profilModalLabel"><%= user.name%></h5>
+                            <h5 class="modal-title modal-title-item" id="profilModalLabel">Mon compte</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -217,21 +215,41 @@
                                 <input type="email" class="form-control" name="email" placeholder="">
                             -->
                             <div class="row">
-                                    <div class="col-md-10 offset-1">
-                                        <h3>
-                                            Votre numéro de téléphone:
-                                        </h3>
-                                        <p class="alt-guide-description">
-                                             <a href=""><%= user.number%></a>
-                                            </p>
-                                            <h3>
-                                                    Votre adresse email:
-                                                </h3>
-                                                <p class="alt-guide-description">
-                                                  <%= user.email%>
-                                                    </p>
-                                    </div>
+                              <div class="col-md-10 alt-account-info">
+                                <label for="" class="mb-3"><strong><%= user.name%></strong> </label>
+                                <br>
+                                <label for="number">Téléphone:</label>
+                                <p class="">
+                                  <a href="0<%= user.number%>">0<%= user.number%></a>
+                                </p>
+                                <label for="">E-mail:</label>
+                                <p class="">
+                                  <a href="laskri.mounir@gmail.com"><%= user.email%></a>
+                                </p>
+                              </div>
+                            </div>
 
+                            <div class="row">
+                              <div class="col-md-10">
+                                
+                              </div>
+                            </div>
+                                <div class="alt-modalUser-contact border-top">
+                                  <label for=""><strong>Connectez vos comptes:</strong></label>
+                                  <br>
+                                  <ul>
+                                    <li class="">
+                                      <a class="" href=""><i class="fab fa-google"></i></a>
+                                      <a class="" href=""><i class="fab fa-facebook-f"></i></a>
+                                      <a class="" href=""><i class="fab fa-stack-overflow"></i></a>
+                                      <a class="" href=""><i class="fab fa-gitlab"></i></a>
+                                      <a class="" href=""><i class="fab fa-github"></i></a>
+                                      <a class="" href=""><i class="fab fa-linkedin"></i></a>
+                                      <a class="" href=""><i class="fab fa-codepen"></i></a>
+                                      
+                                        
+                                    </li>
+                                  </ul>
                                 </div>
                             </form>
                         </div>
@@ -245,21 +263,21 @@
         <!--END POST Item-->
 
         <!-- POST Item-->
-        <div class=" col-md-4 mt-3">
+        <div class=" col-md-2 mt-3">
           <div class="alt-project-item">
-            <div class="post-news-title text-center font-alt pt-2">
-              <a href="#" target="_blank">Messagerie</a>
+            <div class="post-news-title text-center font-alt ">
+              <a href="#" target="_blank" data-toggle="modal" data-target="#inboxModal"><strong>Messagerie</strong></a>
           </div>
           <div class="post-prev-img">
-              <a href="" target="_blank">
-                  <img src="../public/images/gray-metal-cubes-decorative-1005644.jpg" alt="" class="img-fluid" >
+              <a href="" target="_blank" data-toggle="modal" data-target="#inboxModal">
+                  <img src="../public/images/writer.jpg" alt="" class="img-fluid" >
               </a>
           </div>
 
 
           <div class="post-prev-text">
             <div class="post-prev-text">
-              <a href="" data-toggle="modal" data-target="#inboxModal">Messages reçus: </a><span class="badge badge-pill bg-light align-text-bottom">0</span>
+              <a href="" data-toggle="modal" data-target="#inboxModal">Reçus: </a><span class="badge badge-pill bg-light align-text-bottom">0</span>
                  </div>
                </div>
                     <!--modal-->
@@ -284,14 +302,14 @@
                                   </div>
                                   <div class="form-group">
                                     <label for=""> <strong>Autre déstinataire:</strong></label>
-                                    <input type="text" class="form-control alt-login-input  " placeholder="Entrez une adresse e-mail">
+                                    <input type="text" class="form-control alt-general-input  " placeholder="Entrez une adresse e-mail">
                                   </div>
                                   <div class="form-group">
                                     <label for=""> <strong>L'objet de votre message:</strong></label>
-                                    <input type="text" class="form-control alt-login-input " placeholder="Objet">
+                                    <input type="text" class="form-control alt-general-input " placeholder="Objet">
                                     <br>
                                     <label for=""><strong>Votre message:</strong> </label>
-                                    <textarea name="" id="" cols="30" rows="3" class="form-control alt-login-input "
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control alt-general-input "
                                     placeholder="Ecrivez ici..."></textarea>
                                   </div>
                                   
@@ -307,121 +325,170 @@
           </div>
             
         </div>
-        <!--END POST Item-->
+        
         <!--POST Item-->
-        <div class=" col-md-4 mt-3">
+        <div class=" col-md-2 mt-3">
           <div class="alt-project-item">
-            <div class="post-news-title text-center font-alt pt-2">
-              <a href="https://www.sima-sipsa.com/Exposants/L-agriculture-en-Algerie" target="_blank">Commandes</a>
+            <div class="post-news-title text-center font-alt ">
+              <a href="#pricing" ><strong>Catalogue</strong></a>
           </div>
           <div class="post-prev-img">
-              <a href="https://www.sima-sipsa.com/Exposants/L-agriculture-en-Algerie" target="_blank">
-                  <img src="../public/images/burned-match-sticks-3398706.jpg" alt="" class="img-fluid" >
+              <a href="#pricing" >
+                  <img src="../public/images/cubes1.jpg" alt="" class="img-fluid" >
               </a>
           </div>
-          
-
           <div class="post-prev-text">
-            Suivez vos commandes
+            <a href="#pricing"  data-target="">Offres</a>
                </div>
           </div>
-            
         </div>
+        <!--END POST Item-->
+        
+        
+        
       </div>
+        <!--END POST Item-->
+        <!--POST Item-->
+        
+       
         <!--END POST Item -->
 
+        <div class="container mt-5 border-bottom pb-5">
+          <div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
 
+        </div>
 
 
          <!--PRICING SECTION -->
          
          
         
-
+        <!--SHOPPING SECTION-->
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="pricing">
+          <h1 class="display-4">Les offres actuelles</h1>
+          <p class="lead">Profitez des offres adaptés a vos besoins:</p>
+        </div>
+        <div class="container">
+          <!--Shopping Item-->
+                     <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Basic</h4>
+              </div>
+              <div class="post-prev-img">
+                <a href="" target="_blank">
+                    <img src="../public/images/appleWatch.jpg" alt="" class="img-fluid" >
+                </a>
+            </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">0 € <small class="text-muted">/ mois</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>2 utilisateurs</li>
+                  <li>600 Mo d'éspace de stockage</li>
+                  <li>-</li>
+                  <li>Assistant 24h/7</li>
+                  <li>-</li>
+                  <li>-</li>
+                  
+                </ul>
+                <button type="button" class="btn  btn-block alt-general-btn">Commencer</button>
+              </div>
+            </div>
+                    <!--End Shopping Item-->
+         
+            <!--Shopping Item-->
+                    <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Pro</h4>
+              </div>
+              <div class="post-prev-img">
+                <a href="" target="_blank">
+                    <img src="../public/images/proPack.jpg" alt="" class="img-fluid" >
+                </a>
+            </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"> 4.99 € <small class="text-muted">/ mois</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>5 utilisateurs</li>
+                  <li>3 Go d'éspace de stockage</li>
+                  <li>-</li>
+                  <li>Assistant 24h/7</li>
+                  <li>30 E-mails/jour</li>
+                  <li>-</li>
+                </ul>
+                <a href="payment" class="btn btn-block alt-general-btn mb-2">Acheter</a>
+              </div>
+            </div>
+                    <!--End Shopping Item-->
+            
     
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Les offres actuelles</h1>
-      <p class="lead">Profitez des offres adaptés a vos besoins:</p>
-    </div>
-    <div class="container">
-      
-      <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Basic</h4>
-          </div>
-          <div class="post-prev-img">
-            <a href="" target="_blank">
-                <img src="../public/images/black-laptop-computer-beside-white-steno-notebook-2034373.jpg" alt="" class="img-fluid" >
-            </a>
-        </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">0 € <small class="text-muted">/ mois</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>2 utilisateurs</li>
-              <li>600 Mo d'éspace de stockage</li>
-              <li>-</li>
-              <li>Support 24h/7</li>
-              <li>-</li>
-              
-            </ul>
-            <button type="button" class="btn  btn-block alt-general-btn">Commencer</button>
-          </div>
-        </div>
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Pro</h4>
-          </div>
-          <div class="post-prev-img">
-            <a href="" target="_blank">
-                <img src="../public/images/StockSnap_O4V3KXZI1T.jpg" alt="" class="img-fluid" >
-            </a>
-        </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title"> 4.99 € <small class="text-muted">/ mo</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>5 utilisateurs</li>
-              <li>3 Go d'éspace de stockage</li>
-              <li>-</li>
-              <li>Support 24h/7</li>
-              <li>30 E-mails/jour</li>
-              
-            </ul>
-            <a href="payment" class="btn btn-block alt-general-btn mb-2">Acheter</a>
-          </div>
-        </div>
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Premium</h4>
-          </div>
-          <div class="post-prev-img">
-            <a href="" target="_blank">
-                <img src="../public/images/flatlay-of-gadgets-3184451.jpg" alt="" class="img-fluid" >
-            </a>
-        </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">10.99 € <small class="text-muted">/ mois</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>12 utilisateurs</li>
-              <li>10 Go d'éspace de stockage</li>
-              <li>Accés a la base de données</li>
-              <li>Support 24h/7</li>
-              <li>E-mails illimités</li>
-              
-            </ul>
-            <a href="payment" class="btn btn-block alt-general-btn mb-2">Acheter</a>
-          </div>
-        </div>
-      </div>
+            <!--Shopping Item-->
+                     <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Premium</h4>
+              </div>
+              <div class="post-prev-img">
+                <a href="" target="_blank">
+                    <img src="../public/images/premiumPack.jpg" alt="" class="img-fluid" >
+                </a>
+            </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">10.99 € <small class="text-muted">/ mois</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>12 utilisateurs</li>
+                  <li>10 Go d'éspace de stockage</li>
+                  <li>Accés a la base de données</li>
+                  <li>Assistant 24h/7</li>
+                  <li>E-mails illimités</li>
+                  <li>-</li>
+                </ul>
+                <a href="payment" class="btn btn-block alt-general-btn mb-2">Acheter</a>
+              </div>
+            </div>
+                    <!--End Shopping Item-->
     
-
-    </div>
-<!--END PRICING SECTION -->
-
+                   <!--Shopping Item-->
+                   <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Entreprise</h4>
+                    </div>
+                    <div class="post-prev-img">
+                      <a href="" target="_blank">
+                          <img src="../public/images/companyPack.jpg" alt="" class="img-fluid" >
+                      </a>
+                  </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">24.99 € <small class="text-muted">/ mois</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Utilisateurs illimités</li>
+                        <li>100 Go d'éspace de stockage</li>
+                        <li>Accés a la base de données</li>
+                        <li>Assistant 24h/7</li>
+                        <li>E-mails illimités</li>
+                        <li>Integration API</li>
+                      </ul>
+                      <a href="payment" class="btn btn-block alt-general-btn mb-2">Acheter</a>
+                    </div>
+                  </div>
+                          <!--End Shopping Item-->
+    
+            
+    
+    
+    
+          </div>
+        
+    
+        </div>
+    <!--END PRICING SECTION -->
+    
+        <!--END SHOPPING SECTION-->
+    
+   
 
 <!-- FOOTER/CONTACT SECTION-->
 <!--FOOTER Section-->
-<section class="page-section container-fluid border-top" id="footer">
+<footer class="page-section container-fluid border-top" id="footer">
   <div class="row footer-big mt-3">
       <!-- Grid Footer row -->
           <!-- Grid Footer column -->
@@ -456,11 +523,11 @@
                   </a>
                 </li>
                 <li class="">
-                  <a class="" href="/users/logout" >
+                  <a class="" href="" >
                     <i class="fab fa-github"></i>
                   </a>
-                  <a class="" href="/users/logout" ><i class="fab fa-linkedin"></i></a>
-                  <a class="" href="/users/logout" ><i class="fab fa-codepen"></i></a>
+                  <a class="" href="" ><i class="fab fa-linkedin"></i></a>
+                  <a class="" href="" ><i class="fab fa-codepen"></i></a>
                   
                     
                 </li>
@@ -474,31 +541,28 @@
             <div class="footer-menu">
                 
               <h5 class="alt-footer-subtitle font-alt mb-4 ">
-                  Helpful:
+                  Pratiques:
               </h5>
               <ul class="nav flex-column mb-2">
-                <li class="">
-                  <a class="nav-link" href="#">
-                    <i class="fas fa-chart-line"></i>
-                     Rapports
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
+                    <i class="far fa-user"></i>
+                    Compte
                   </a>
                 </li>
-                <li class="">
-                  <a class="nav-link" href="#">
-                    <i class="fas fa-history"></i>
-                    Historique d'Activités
+                <li class="nav-item">
+                  
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
+                    <i class="far fa-envelope"></i>
+      
+                    Messagerie 
                   </a>
+                  
                 </li>
-                <li class="">
-                  <a class="nav-link" href="#">
-                    <i class="fas fa-lock"></i>
-                    Sécurité
-                  </a>
-                </li>
-                <li class="">
-                  <a class="nav-link" href="/users/logout">
-                    <i class="fas fa-sign-out-alt"></i> 
-                    Déconnexion
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">
+                    <i class="fab fa-buromobelexperte"></i>          
+                       Catalogue
                   </a>
                 </li>
               </ul>
@@ -523,8 +587,10 @@
           </div>
       <!-- End Grid Footer column -->
 </div>
-</section>
+</footer>
 <!--FOOTER Section-->
   <!--END FOOTER/CONTACT SECTION-->
 
+
+</html>
 

@@ -1,26 +1,26 @@
 <nav class="navbar navbar-expand-lg nav-container fixed-top ">
  
-    <a class="navbar-brand" href=""><i class="fas fa-dice-d20"></i></a>
+    <a class="navbar-brand" href="/dashboard/"><i class="fas fa-dice-d20"></i></a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon my-toggler"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarsExample04">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto float-right">
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
           
-          Profil
+          Compte
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#pricing">
           
           Catalogue
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
           Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
         </a>
         
@@ -49,19 +49,19 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item alt">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active alt-sidebar-title" href="#">
               Menu 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
               <i class="far fa-user"></i>
-              Profil
+              Compte
             </a>
           </li>
           <li class="nav-item">
             
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
               <i class="far fa-envelope"></i>
 
               Messagerie <span class="badge badge-pill bg-light align-text-bottom">0</span>
@@ -69,9 +69,9 @@
             
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="far fa-newspaper"></i>
-              Actualités
+            <a class="nav-link" href="#pricing">
+              <i class="fab fa-buromobelexperte"></i>          
+                 Catalogue
             </a>
           </li>
           <li class="nav-item">
@@ -89,7 +89,7 @@
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Informations</span>
+          <span>Accés</span>
           <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
             
           </a>
@@ -122,6 +122,7 @@
         </ul>
       </div>
     </nav>
+
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
 <div class="container">
@@ -167,7 +168,7 @@
 
       <form class="card p-2">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Code promo">
+          <input type="text" class="form-control alt-general-input" placeholder="Code promo">
           <div class="input-group-append">
             <button type="submit" class="btn btn-secondary">Appliquer</button>
           </div>
@@ -180,14 +181,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Prénom</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <input type="text" class="form-control alt-general-input" id="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Nom de famille</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            <input type="text" class="form-control alt-general-input" id="lastName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -200,7 +201,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
-            <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required>
+            <input type="text" class="form-control alt-general-input" id="username" placeholder="Nom d'utilisateur" required>
             <div class="invalid-feedback" style="width: 100%;">
               Your username is required.
             </div>
@@ -209,7 +210,7 @@
 
         <div class="mb-3">
           <label for="email">Votre adresse e-mail <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="mail@example.com">
+          <input type="email" class="form-control alt-general-input" id="email" placeholder="mail@example.com">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -217,7 +218,7 @@
 
         <div class="mb-3">
           <label for="address">Adresse</label>
-          <input type="text" class="form-control" id="address" placeholder="" required>
+          <input type="text" class="form-control alt-general-input" id="address" placeholder="" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -225,13 +226,13 @@
 
         <div class="mb-3">
           <label for="address2">Adresse 2 <span class="text-muted">(Optionnel)</span></label>
-          <inputpe="text" class="form-control" id="address2" placeholder="N° Appartement">
+          <inputpe="text" class="form-control alt-general-input" id="address2" placeholder="N° Appartement">
         </div>
 
         <div class="row">
           <div class="col-md-5 mb-3">
             <label for="country">Pays</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <select class="custom-select d-block w-100 alt-general-input" id="country" required>
               <option value="">Choisir...</option>
               <option>France</option>
               <option value="">Allemange</option>
@@ -246,7 +247,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <label for="state">Région</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <select class="custom-select d-block w-100 alt-general-input" id="state" required>
               <option value="">Choisir...</option>
               <option>Ile-De-France</option>
             </select>
@@ -256,7 +257,7 @@
           </div>
           <div class="col-md-3 mb-3">
             <label for="zip">Code postal</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <input type="text" class="form-control alt-general-input" id="zip" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -301,7 +302,7 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="cc-name">Nom sur la carte</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+            <input type="text" class="form-control alt-general-input" id="cc-name" placeholder="" required>
             <small class="text-muted">Nom complet comme indiqué sur la carte</small>
             <div class="invalid-feedback">
               Name on card is required
@@ -309,7 +310,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="cc-number">Numéro de carte de crédit</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+            <input type="text" class="form-control alt-general-input" id="cc-number" placeholder="" required>
             <div class="invalid-feedback">
               Credit card number is required
             </div>
@@ -318,14 +319,14 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="cc-expiration">Date d'éxpiration</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+            <input type="text" class="form-control alt-general-input" id="cc-expiration" placeholder="" required>
             <div class="invalid-feedback">
               Expiration date required
             </div>
           </div>
           <div class="col-md-3 mb-3">
             <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+            <input type="text" class="form-control alt-general-input" id="cc-cvv" placeholder="" required>
             <div class="invalid-feedback">
               Security code required
             </div>
@@ -340,10 +341,9 @@
 
   
 </div>
-
 <!-- FOOTER/CONTACT SECTION-->
 <!--FOOTER Section-->
-<section class="page-section container-fluid border-top" id="footer">
+<footer class="page-section container-fluid border-top" id="footer">
     <div class="row footer-big mt-3">
         <!-- Grid Footer row -->
             <!-- Grid Footer column -->
@@ -378,11 +378,11 @@
                     </a>
                   </li>
                   <li class="">
-                    <a class="" href="/users/logout" >
+                    <a class="" href="" >
                       <i class="fab fa-github"></i>
                     </a>
-                    <a class="" href="/users/logout" ><i class="fab fa-linkedin"></i></a>
-                    <a class="" href="/users/logout" ><i class="fab fa-codepen"></i></a>
+                    <a class="" href="" ><i class="fab fa-linkedin"></i></a>
+                    <a class="" href="" ><i class="fab fa-codepen"></i></a>
                     
                       
                   </li>
@@ -396,31 +396,31 @@
               <div class="footer-menu">
                   
                 <h5 class="alt-footer-subtitle font-alt mb-4 ">
-                    Helpful:
+                    Pratiques:
                 </h5>
                 <ul class="nav flex-column mb-2">
-                  <li class="">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-chart-line"></i>
-                       Rapports
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#profilModal">
+                      <i class="far fa-user"></i>
+                      Compte
                     </a>
                   </li>
-                  <li class="">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-history"></i>
-                      Historique d'Activités
+                  <li class="nav-item">
+                    
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#inboxModal">
+                      <i class="far fa-envelope"></i>
+        
+                      Messagerie 
                     </a>
+                    
+
+                    
                   </li>
-                  <li class="">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-lock"></i>
-                      Sécurité
-                    </a>
-                  </li>
-                  <li class="">
-                    <a class="nav-link" href="/users/logout">
-                      <i class="fas fa-sign-out-alt"></i> 
-                      Déconnexion
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#pricing">
+                      <i class="fab fa-buromobelexperte"></i>          
+                         Catalogue
                     </a>
                   </li>
                 </ul>
@@ -445,7 +445,7 @@
             </div>
         <!-- End Grid Footer column -->
   </div>
-  </section>
+  </footer>
   <!--FOOTER Section-->
     <!--END FOOTER/CONTACT SECTION-->
   

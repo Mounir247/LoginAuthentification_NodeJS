@@ -1,6 +1,8 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: black;
 }
+
 /*=============
 = Layouts EJS =
 =============*/
@@ -73,7 +75,7 @@ body {
     font-weight: 500;
 }
 
-.alt-login-input{
+.alt-general-input{
     border: 1px solid #000;
     border-radius: 0;
 }
@@ -121,7 +123,7 @@ body {
     font-weight: 500;
 }
 
-.alt-register-input{
+.alt-general-input{
     border: 1px solid #000;
     border-radius: 0;
 }
@@ -143,6 +145,13 @@ body {
 /*===============
 = Dashboard EJS =
 ===============*/
+/*
+*body
+*/
+
+ html .dashboard-full{
+  background-color: rgb(255, 255, 255);
+}
   /*
    * Navbar
    */
@@ -159,6 +168,19 @@ body {
     margin-left: 10px;
 
   }
+
+  
+.custom-toggler.navbar-toggler { 
+  margin: 3px;
+  border-color: rgb(172, 163, 163); 
+} 
+.custom-toggler .navbar-toggler-icon { 
+
+  background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(172, 163, 163)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+
+} 
+
   
 .navbar-nav {
     width: 100%;
@@ -217,7 +239,9 @@ nav .navbar-nav li a:hover {
       position: sticky;
     }
   }
-  
+  .alt-sidebar-title{
+    font-size: 1.4rem;
+  }
   .sidebar .nav-link {
     font-weight: 500;
     color: #3b3434;
@@ -245,6 +269,10 @@ nav .navbar-nav li a:hover {
   /*
    * Content
    */
+
+   
+
+
    .alt-project-container{
     margin: 10px;
     border: none;
@@ -257,12 +285,14 @@ nav .navbar-nav li a:hover {
     width: 100%;
     height: 100%;
     opacity: 1;
-    border: 1px solid transparent;
-    /* border-radius: 10px; */
+    /* border: 1px solid rgb(214, 213, 213); */
+    border-radius: 5px; 
+
+
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  
 }
 .post-prev-img{
     background-color: transparent;
@@ -285,6 +315,7 @@ nav .navbar-nav li a:hover {
     filter: alpha(opacity=70);
     transition: .5s linear;
 }
+
 .post-news-title a {
     font-size: 1.2rem;
     font-weight: 500;
@@ -292,9 +323,12 @@ nav .navbar-nav li a:hover {
     margin: 10px 0 10px 0;
 
 }
-
-
 .post-prev-text{
+  text-align: center;
+}
+
+.post-prev-text a{
+
     margin: 20px 5px 10px 5px;
     font-weight: 500;
     font-size: 1rem;
@@ -318,6 +352,30 @@ nav .navbar-nav li a:hover {
   }
 
   /*modal*/ 
+  .alt-account-info{
+   font-weight: 600;
+    line-height:1vw;
+  }
+  .alt-account-info a{
+    color: rgb(99, 97, 97);
+   }
+  .alt-modalUser-contact{
+    
+    padding: 5px;
+
+  }
+  .alt-modalUser-contact ul {
+    text-align: center;
+  }
+  .alt-modalUser-contact ul li{
+    list-style: none;
+  }
+  .alt-modalUser-contact ul li a{
+    margin: 5px;
+    font-size: 2rem;
+    color: #000000;
+    
+  }
   .alt-modal-container{
     
     width: 100%;
@@ -468,30 +526,14 @@ a:focus {
 
 
 
-.mini-footer {
-  background: #ffffff;
-  text-align: center;
-  padding: 25px 0;
-  height: 5px;
-}
 
-.mini-footer p {
-  margin: 0;
-  line-height: 26px;
-  font-size: 10px;
-  color: rgb(0, 0, 0)
-}
 
-.mini-footer p a {
-  color: #404463;
-}
-
-.mini-footer p a:hover {
-  color: #000000;
+.footer-copyright p{
+  font-size: 11px;
 }
 .footer-copyright a{
   bottom: 0;
-  color: rgb(12, 14, 10);
+  color: rgb(121, 66, 22);
 }
 
 /*===================
