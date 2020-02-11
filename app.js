@@ -26,8 +26,8 @@ app.use('/public', express.static('public'))
 require('./config/passport')(passport);
 
 //DB config
-const db = require('./config/keys').mongoURI;
-
+// const db = require('./config/keys').mongoURI;
+const db = 'mongodb+srv://mounir247:mounir247@cluster1-gj2sf.mongodb.net/test?retryWrites=true&w=majority';
 
 //Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
