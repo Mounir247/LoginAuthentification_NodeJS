@@ -19,11 +19,6 @@ client.connect(err => {
 });
 
 
-var uriTestDb = "mongodb+srv://mounir247:mounir247@cluster1-gj2sf.mongodb.net/test?retryWrites=true&w=majority";
-MongoClient.connect(uriTestDb, function(err, db) {
-   db.close();
-});
-
 
 //Style css
 app.use('/public', express.static('public'))
