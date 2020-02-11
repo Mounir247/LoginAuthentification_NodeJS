@@ -5,7 +5,25 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://mounir247:mounir247@cluster1-gj2sf.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
 const app = express();
+
+
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+ // perform actions on the collection object
+  client.close();
+});
+
+
+var uriTestDb = "mongodb+srv://mounir247:mounir247@cluster1-gj2sf.mongodb.net/test?retryWrites=true&w=majority";
+MongoClient.connect(uriTestDb, function(err, db) {
+   db.close();
+});
+
 
 //Style css
 app.use('/public', express.static('public'))
