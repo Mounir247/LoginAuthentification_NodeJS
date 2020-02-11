@@ -5,10 +5,10 @@ const passport = require('passport');
 //User model
 const User = require('../models/User');
 //Login page
-router.get('/login', (req, res)=> res.render('Login'));
+router.get('/login', (req, res)=> res.redirect('../views/login.ejs'));
 
 //Register page
-router.get('/register', (req, res)=> res.render('Register'));
+router.get('/register', (req, res)=> res.redirect('../views/register.ejs'));
 
 
 
