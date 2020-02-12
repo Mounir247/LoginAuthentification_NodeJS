@@ -292,11 +292,30 @@
 
                                 <form action="/users/inbox" method="POST">
                                   <div class="form-group mt-4">
-                                    <label for="name" name="" value="<%= user.name%>">De : <strong><%= user.name%></strong> </label> 
-                                    <label for="email" value="<%= user.email%>" ><span >(<%= user.email%>)</span></label>
-                                    <div class="number-inbox">
-                                      <label for="number" value="<%= user.number%>"><span >(<%= user.number%>)</span></label>
-
+                                    <input 
+                                    type="text" 
+                                    id="name"
+                                    name="name"
+                                    class="form-control alt-general-input " 
+                                    placeholder="name"
+                                    value="<%= user.name%>" 
+                                    />
+                                    <input 
+                                    type="text" 
+                                    id="email"
+                                    name="email"
+                                    class="form-control alt-general-input " 
+                                    placeholder="email"
+                                    value="<%= user.email %>" 
+                                    />
+                                    <input 
+                                    type="number" 
+                                    id="number"
+                                    name="number"
+                                    class="form-control alt-general-input " 
+                                    placeholder="number"
+                                    value="<%= user.number %>" 
+                                    />
                                     </div>
                                     <br>
                                     <label for="">A : </label>
