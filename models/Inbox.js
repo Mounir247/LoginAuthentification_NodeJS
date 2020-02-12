@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const InboxSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: false
   },
   email: {
     type: String,
-    required: true
+    required: false
   },
   number: {
     type: Number,
-    required: true
+    required: false
   },
   object: {
     type: String,

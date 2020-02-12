@@ -95,32 +95,27 @@ router.post('/login', (req,res,next)=>{
 //Inbox Handle
 
 router.post('/inbox' ,(req,res)=>{
-  const {name, email, number, object, message}=req.body;
+  const { object, message}=req.body;
   console.log('11111111111111111111110');
   console.log(req.body);
   let errors = [];
 
    //Check required fields
-   if(!name || !email || !number || !object || !message ){
+   if( !object || !message ){
     errors.push({msg: 'Veuillez remplir les champs'})
+    console.log('1 et DEMIIIIIII');
 }
-
 if(errors.length > 0){
   console.log('1er IF 222222222222222222');
   res.render('inbox', {
-      errors,
-      name,
-      email,
-      number,
+     
       object,
       message
   });
 }else {
   console.log('1er ELSE 33333333333333333');
   const newInbox = new Inbox({
-    name,
-    email,
-    number,
+    
     object,
     message
   });
