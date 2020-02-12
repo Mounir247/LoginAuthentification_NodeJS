@@ -27,6 +27,6 @@ const InboxSchema = new mongoose.Schema({
   }
 });
 
-const User = mongoose.model('User', UserSchema);
+const Inbox = mongoose.model('Inbox', InboxSchema);
 
-module.exports = User;
+module.exports = Inbox;

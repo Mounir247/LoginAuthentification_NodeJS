@@ -122,6 +122,8 @@ if(errors.length > 0){
   });
 
   newInbox.save()
+
+  
   .then(inbox => {
       req.flash('success_msg', 'Votre Message a été envoyé, vous pouvez aller chier');
     res.redirect('/dashboard');
