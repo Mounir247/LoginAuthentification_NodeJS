@@ -292,10 +292,10 @@
 
                                 <form action="/users/inbox" method="POST">
                                   <div class="form-group mt-4">
-                                    <label for="name">De : <strong><%= user.name%></strong> </label> 
-                                    <label for="email" ><span >(<%= user.email%>)</span></label>
+                                    <label for="name" name="" value="<%= user.name%>">De : <strong><%= user.name%></strong> </label> 
+                                    <label for="email" value="<%= user.email%>" ><span >(<%= user.email%>)</span></label>
                                     <div class="number-inbox">
-                                      <label for="number"><span >(<%= user.number%>)</span></label>
+                                      <label for="number" value="<%= user.number%>"><span >(<%= user.number%>)</span></label>
 
                                     </div>
                                     <br>

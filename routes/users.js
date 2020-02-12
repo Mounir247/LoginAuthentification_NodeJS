@@ -120,6 +120,7 @@ if(errors.length > 0){
     message
   });
   console.log('SORTI DU ELSE 4444444444444444444');
+  console.log(newInbox);
   newInbox.save()
  
   .then(inbox => {
