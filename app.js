@@ -12,6 +12,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 const app = express();
 
 
+
 client.connect(err => {
   const collection = client.db("test").collection("devices");
  // perform actions on the collection object
@@ -30,10 +31,12 @@ require('./config/passport')(passport);
 const db = 'mongodb+srv://mounir247:mounir247@cluster1-gj2sf.mongodb.net/test?retryWrites=true&w=majority';
 
 //Connect to Mongo
-mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
-
-.then(() => console.log('MongoDB Connected...'))
-.catch(err => console.log(err));
+mongoose.connect(process.env.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+const conn = mongoose.connection;
+conn.once('open', () => { console.log('MDB connected'); });
+conn.on('error', (err) => {console.log('MDB ERR ', err); });
+// .then(() => console.log('MongoDB Connected...'))
+// .catch(err => console.log(err));
 
 //EJS
 app.use(expressLayouts);
