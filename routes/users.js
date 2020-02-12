@@ -126,7 +126,7 @@ if(errors.length > 0){
   });
   console.log('SORTI DU ELSE 4444444444444444444');
   newInbox.save()
-  console.log('SAVE PASS 55555555555555555555555');
+ 
   .then(inbox => {
       req.flash('success_msg', 'Votre Message a été envoyé, vous pouvez aller chier');
     res.redirect('/dashboard');
