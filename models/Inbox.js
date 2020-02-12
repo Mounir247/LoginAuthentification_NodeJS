@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const user = require('./User')
 const InboxSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -7,12 +7,12 @@ const InboxSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    defalut: user.email
-  },
+    default: user.email
+    },
   number: {
     type: Number,
     default: user.number
-  },
+    },
   object: {
     type: String,
     required: true
