@@ -115,9 +115,7 @@ if(errors.length > 0){
 }else {
   console.log('1er ELSE 33333333333333333');
   const newInbox = new Inbox({
-    name,
-     email,
-      number,
+    
     object,
     message
   });
