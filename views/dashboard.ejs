@@ -290,27 +290,41 @@
                               <div class="modal-body">
                                 <h4 class="modal-title modal-title-item" id="inboxModalLabel">Envoyez un message:</h4>
 
-                                <form action="#">
+                                <form action="/users/inbox" method="POST">
                                   <div class="form-group mt-4">
-                                    <label for="">De : <strong><%= user.name%></strong> </label> 
-                                    <span>(<%= user.email%>)</span>
+                                    <label for="name">De : <strong><%= user.name%></strong> </label> 
+                                    <label for="email" ><span >(<%= user.email%>)</span></label>
+                                    <div class="number-inbox">
+                                      <label for="number"><span >(<%= user.number%>)</span></label>
+
+                                    </div>
                                     <br>
                                     <label for="">A : </label>
                                     <div class="checkbox mb-1 mt-1">
                                         <input type="checkbox" value="remember-me"> <label for=""><strong>Service client </strong><span>(contact@gmail.com)</span></label>
                                     </div>
                                   </div>
+                                  
                                   <div class="form-group">
-                                    <label for=""> <strong>Autre déstinataire:</strong></label>
-                                    <input type="text" class="form-control alt-general-input  " placeholder="Entrez une adresse e-mail">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for=""> <strong>L'objet de votre message:</strong></label>
-                                    <input type="text" class="form-control alt-general-input " placeholder="Objet">
+                                    <label for="object"> <strong>L'objet de votre message:</strong></label>
+                                    <input 
+                                    type="text" 
+                                    id="object"
+                                    name="object"
+                                    class="form-control alt-general-input " 
+                                    placeholder="Objet"
+                                    value="<%= typeof object != 'undefined' ? object : '' %>" 
+                                    />
                                     <br>
-                                    <label for=""><strong>Votre message:</strong> </label>
-                                    <textarea name="" id="" cols="30" rows="3" class="form-control alt-general-input "
-                                    placeholder="Ecrivez ici..."></textarea>
+                                    <label for="message"><strong>Votre message:</strong> </label>
+                                    <input 
+                                    type="text"
+                                    name="message" 
+                                    id="message" 
+                                    cols="30" rows="3" class="form-control alt-general-input "
+                                    placeholder="Ecrivez ici..."
+                                    value="<%= typeof message != 'undefined' ? message : '' %>"
+                                    />
                                   </div>
                                   
                                   <div class="form-group">

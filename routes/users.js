@@ -4,6 +4,10 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 //User model
 const User = require('../models/User');
+const Inbox = require('../models/Inbox')
+
+
+
 
 
 
@@ -85,6 +89,58 @@ router.post('/login', (req,res,next)=>{
     failureFlash: true
   })(req,res,next);
 });
+
+
+
+//Inbox Handle
+
+router.post('/inbox' ,(req,res)=>{
+  const {name, email, number, object, message}=req.body;
+  console.log(req.body);
+  let errors = [];
+   //Check required fields
+   if(!name || !email || !number || !object || !message ){
+    errors.push({msg: 'Veuillez remplir les champs'})
+}
+
+if(errors.length > 0){
+  res.render('inbox', {
+      errors,
+      name,
+      email,
+      number,
+      object,
+      message
+  });
+}else {
+  const newInbox = new Inbox({
+    name,
+    email,
+    number,
+    object,
+    message
+  });
+
+  newInbox.save()
+  .then(inbox => {
+      req.flash('success_msg', 'Votre Message a été envoyé, vous pouvez aller chier');
+    res.redirect('/dashboard');
+  })
+  .catch(err=> console.log(err));
+      }
+  })
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Logout Handle
 
