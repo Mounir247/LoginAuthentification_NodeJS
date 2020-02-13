@@ -310,7 +310,7 @@
 
 
                                     
-                                  <div class="form-group alt-general-input">
+                                  <div class="form-group">
                                     <label for="object"> <strong>L'objet de votre message:</strong></label>
                                     <input 
                                     type="text" 
@@ -322,14 +322,14 @@
                                     />
                                     <br>
                                     <label for="message"><strong>Votre message:</strong> </label>
-                                    <input 
+                                    <textarea 
                                     type="text"
                                     name="message" 
                                     id="message" 
                                     cols="30" rows="3" class="form-control alt-general-input "
                                     placeholder="Ecrivez ici..."
                                     value="<%= typeof message != 'undefined' ? message : '' %>"
-                                    />
+                                    ></textarea>
                                   </div>
                                   
                                   <div class="form-group">
