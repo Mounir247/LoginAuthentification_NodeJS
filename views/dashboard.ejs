@@ -280,7 +280,8 @@
               <a href="" data-toggle="modal" data-target="#inboxModal">Reçus: </a><span class="badge badge-pill bg-light align-text-bottom">0</span>
                  </div>
                </div>
-                    <!--modal-->
+
+                    <!--Modal-->
                     <div class="modal fade alt-modal-container" id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="inboxModalLabel" aria-hidden="true">
                           <div class="modal-content modal-dialog modal-section">
                               <div class="modal-header">
@@ -291,41 +292,25 @@
                                 <h4 class="modal-title modal-title-item" id="inboxModalLabel">Envoyez un message:</h4>
 
                                 <form action="/users/inbox" method="POST">
+                                  <!-- Information DATA not displayed on front -->
                                   <div class=" form-group mt-4 alt-general-input" style="display: none;">
-                                    <input 
-
-                                    type="text" 
-                                    id="name"
-                                    name="name"
-                                    class="form-control alt-general-input " 
-                                    placeholder="name"
-                                    value="<%= user.name%>" 
-                                    />
-                                    <input 
-                                    type="text" 
-                                    id="email"
-                                    name="email"
-                                    class="form-control alt-general-input " 
-                                    placeholder="email"
-                                    value="<%= user.email %>" 
-                                    />
-                                    <input 
-                                    type="number" 
-                                    id="number"
-                                    name="number"
-                                    class="form-control alt-general-input " 
-                                    placeholder="number"
-                                    value="<%= user.number %>" 
-                                    />
-                                    </div>
+                                    <input type="text" id="name" name="name" class="form-control alt-general-input " placeholder="name"
+                                      value="<%= user.name%>" />
+                                    <input type="text" id="email" name="email" class="form-control alt-general-input " placeholder="email"
+                                      value="<%= user.email %>" />
+                                    <input type="number" id="number" name="number" class="form-control alt-general-input " placeholder="number"
+                                      value="<%= user.number %>" />
+                                  </div>
+                                  <!-- END  Information DATA not displayed on front -->
                                     <br>
                                     <label for="">A : </label>
                                     <div class="checkbox mb-1 mt-1">
                                         <input type="checkbox" value="remember-me"> <label for=""><strong>Service client </strong><span>(contact@gmail.com)</span></label>
                                     </div>
-                                  </div>
-                                  
-                                  <div class="form-group">
+
+
+                                    
+                                  <div class="form-group alt-general-input">
                                     <label for="object"> <strong>L'objet de votre message:</strong></label>
                                     <input 
                                     type="text" 
@@ -350,11 +335,14 @@
                                   <div class="form-group">
                                     <input type="submit" value="Envoyer Message" class="btn  btn-block  alt-register-btn">
                                   </div>
+
+                                  </div>
+                                  
                                 </form>
                               </div>
       
                           </div>
-                      
+                      <!-- END Modal -->
                   </div>
           </div>
             <!--POST Item-->

@@ -75,10 +75,6 @@ body {
     font-weight: 500;
 }
 
-.alt-general-input{
-    border: 1px solid #000;
-    border-radius: 0;
-}
 .alt-login-btn{
     font-size: 1.2rem;
     font-weight: 700;
@@ -126,6 +122,7 @@ body {
 .alt-general-input{
     border: 1px solid #000;
     border-radius: 0;
+    margin: 15px;
 }
 .alt-register-btn{
     font-size: 1.2rem;
